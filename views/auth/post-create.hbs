@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="/stylesheets/style.css" />
+<div id="post-form">
+    <h2>{{title}}</h2>
+    <h4>Remember to add the ingredients to which others may be allergic or intolerant to, at the end of your post!</h4>
+    <div>
+        <form id="form-container" action="/auth/post-create" method="POST">
+            <div>
+                <label for="title">Title</label>
+                <input type="text" name="title">
+
+            </div>
+            <div>
+                <label for="foodImage">Upload a nice picture about you!</label>
+                <input type="file" name="foodImage" id="food-image" accept="image/*" required>
+                <br>
+            </div>
+            <div>
+                <label for="description">Description</label>
+                <textarea id="content" name="description" required></textarea>
+            </div>
+
+            <div>
+                <label for="foodType">Food Type:</label>
+                <select id="food-type" name="foodType">
+                    <option value="omnivore">Omnivore</option>
+                    <option value="vegan">Vegan</option>
+                    <option value="vegetarian">Vegetarian</option>
+                </select>
+                <br>
+            </div>
+
+            <div id="pickUpTime">
+                <label for="pickUpTime">Pick-up time range</label>
+                <p>Approximate</p>
+                <input type="text" id="pick-up-time" name="pickUpTime" required>
+                
+               <!-- <input type="time" min="00:00" max="23:00" id="pick-up-time" name="pickUpTime" required> -->
+            </div>
+
+            <div>
+                <label for="expiringDate">Expiring Date</label>
+                <input type="date" id="expiring-date" name="expiringDate" required>
+            </div>
+
+            <div>
+                <label for="pickUpPlace">Pick up place</label>
+                <input type="text" id="pick-up-place" name="pickUpPlace" required>
+            </div>
+
+            <div>
+                <label for="alergies">Contains:</label>
+                <input type="text" name="alergies" required>
+            </div>
+
+            
+            <button type="submit">CREATE</button>
+
+        </form>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<h2>Hi, {{this.username}} ✍️ </h2>
+<br>
+
+<form class="user-edit" action="/auth/user-edit" method="POST">
+    <div class="user-edit-container">
+
+        <!-- The mail and username is Non-editable -->
+        <p><strong>Username:</strong> {{this.username}}</p>
+        <p><strong>Email:</strong> {{this.email}}</p>
+        {{!-- <p><strong>Location:</strong> {{this.userlocation}}</p> --}}
+        <br>
+        
+        <!-- Display current user image -->
+        <img height="60px" width="60px" src="{{this.profilePicture}}" alt="Profile Picture"><br>
+        <!-- Input for a new image (if you want to allow image update) -->
+        <input type="file" name="profilePicture" id="profilePicture" accept="image/*">
+        <br><br>
+       {{!--  <!-- Editable username -->
+        <label for="username"><strong>Username:</strong></label><br>
+        <textarea id="username" name="username">{{this.username}}</textarea> 
+        <br><br> --}}
+
+          <!-- Editable location -->
+        <label for="userlocation"><strong>Location:</strong></label><br>
+        <textarea id="userlocation" name="userlocation">{{this.userlocation}}</textarea> 
+        <br><br>
+
+        <!-- Editable bio -->
+        <label for="description"><strong>Your bio:</strong></label><br>
+        <textarea  id="content" name="bio">{{this.bio}}</textarea>
+        <br>
+    <br><br>
+    <button type="submit"><strong>SAVE PROFILE</strong></button>
+    </div>
+</form>

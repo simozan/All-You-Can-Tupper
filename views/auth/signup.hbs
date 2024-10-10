@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="/stylesheets/style.css" />
+
+<body class="first-pages-body">
+  <div id="form">
+    <img class="first-pages-logos" src="/images/pollo2.png">
+    <br>
+    <h2>Create an account</h2>
+    <br>
+    <form action="/auth/signup" method="POST" class="form-login-signup">
+      <div class="fill-form">
+        <label> Username
+          <input type="text" name="username" placeholder="Your username" />
+        </label>
+        <br>
+        <label> Email
+          <input type="email" name="email" placeholder="Your email" />
+        </label>
+        <br>
+        <label> Password
+          <input type="password" name="password" placeholder="Your password" />
+        </label>
+      </div>
+      <br>
+      <button type="submit" class="button">Sign Up</button>
+
+
+      {{#if errorMessage}}
+      <p class="error">{{errorMessage}}</p>
+      {{/if}}
+    </form>
+  </div>
+</body>

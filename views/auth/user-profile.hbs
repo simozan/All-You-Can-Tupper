@@ -1,0 +1,31 @@
+{{!-- this is a nav user to say hello, show image, and buttons available to create and edit profile --}}
+<div class="nav-user">
+<br>
+<h1><img height="60px" width="60px" src="{{this.profilePicture}}"> Hi, {{this.username}} 🖖  </h1>
+ <p>Here, you can <a href="./user-edit"> <button> Edit profile</button></a> or <a href="./post-create"> <button> Share Tupper</button></a> </p>
+</div>
+
+<br>
+{{!-- this is a div with general info user  --}}
+{{!-- <div class="info-user">
+<p>Username : {{this.username}}</p>
+<p>e-mail : {{this.email}}</p>
+<p>About you: {{this.bio}}</p>
+</div> --}}
+
+<br>
+{{!-- this is a div TO SHOW USER POSTS  --}}
+<div class="tuppers-shared" >
+<h2>↓↓↓↓ Tuppers Shared! | {{!-- horizontal scrolling → → → → → → → → --}} </h2>
+<img height="200px" width="200px" src="http://olegif.com/bin/gifs/00/08/05.gif" alt="">
+</div>
+
+<br>
+<hr>
+<br>
+{{!-- this is a div TO SHOW THE FOOD REQUIRED FROM OTHER USERS --}}
+<div class="tuppers-tuppered">
+<h2>↓↓↓↓ All you have Tuppered | {{!-- horizontal scrolling → → → → → → → → --}}  </h2>
+<img height="200px" width="200px" src="https://uvn-brightspot.s3.amazonaws.com/assets/vixes/btg/donde-esta-mi-hamburguesa-15-gifs-de-homero-disfrutando-el-placer-de-comer-4.gif" alt="">
+</div>
+

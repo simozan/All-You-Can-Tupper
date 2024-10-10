@@ -1,0 +1,12 @@
+<h1>This is the Feed Posts</h1>
+<div class="feed-container">
+  {{#each posts}}
+    <div class="food">
+      <img class="image" src="{{this.foodImage}}" alt="{{this.name}}">
+      <h2>{{this.title}}</h2>
+      <p>This food expires on: {{this.expiringDate}}</p>
+      <p>Location: {{this.pickUpPlace}}</p>
+      <p>User: {{this.creator}} </p>
+    </div>
+  {{/each}}
+</div>
